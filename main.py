@@ -26,8 +26,19 @@ class ProposalPage(webapp2.RequestHandler):
         self.response.write(template.render())
 
 
+class EssayPage(webapp2.RequestHandler):
+    def get(self, essay_name):
+        print essay_name + '.html'
+        import logging
+        logging.warn(essay_name + '.html')
+        template = jinja_environment.get_template('essays/' + essay_name + '.html')
+        self.response.write(template.render())
+
+
+
 application = webapp2.WSGIApplication([
                                       ('/', LandingPage),
                                       ('/proposal', ProposalPage),
+                                      (r'/essay/(.*)', EssayPage),
                                       ], debug=debug)
 
