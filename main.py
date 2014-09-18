@@ -16,7 +16,7 @@ jinja_environment = jinja2.Environment(
 
 class LandingPage(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('index.html')
+        template = jinja_environment.get_template('landing.html')
         self.response.write(template.render())
 
 
