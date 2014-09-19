@@ -35,7 +35,6 @@ class EssayPage(webapp2.RequestHandler):
 
 application = webapp2.WSGIApplication([
                                       ('/', LandingPage),
-                                      ('/proposal', ProposalPage),
                                       (r'/essay/(.*)', EssayPage),
                                       ], debug=debug)
 
