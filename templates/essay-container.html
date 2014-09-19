@@ -1,22 +1,22 @@
 {% extends "base.html" %}
-{% block subtitle %}{{essay_title}}{% endblock subtitle %}
+{% block subtitle %}{{ essay_title }}{% endblock subtitle %}
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            <h1>{{ self.subtitle() }}</h1>
-            <h4>{{ publisher }}, {{ date }}</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>{{ self.subtitle() }}</h1>
+                <h4>{{ publisher }}, {{ date }}</h4>
 
-            <hr>
+                <hr>
 
-            {% for paragraph in paragraph_list %}
-                <p class="lead text-justify">{{paragraph}}</p>
-            {% endfor %}
+                {% for paragraph in paragraph_list %}
+                    <p class="lead text-justify">{{ paragraph }}</p>
+                {% endfor %}
 
-            <hr>
+                <hr>
+            </div>
         </div>
-    </div>
 
-    {% include "footer.html" %}
-</div>
+        {% include "footer.html" %}
+    </div>
 {% endblock content %}
