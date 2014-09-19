@@ -1,13 +1,16 @@
 {% extends "base.html" %}
+{% block subtitle %}{{essay_title}}{% endblock subtitle %}
 {% block content %}
 <div class="container">
     <div class="row">
         <div class="col-md-8">
-            <h1>(( self.subtitle() ))</h1>
+            <h1>{{ self.subtitle() }}</h1>
 
             <hr>
 
-            {% block essaycontent %}{% endblock essaycontent %}
+            {% for paragraph in paragraph_list %}
+                <p class="lead text-justify">{{paragraph}}</p>
+            {% endfor %}
 
             <hr>
         </div>
