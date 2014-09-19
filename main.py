@@ -18,12 +18,6 @@ class LandingPage(webapp2.RequestHandler):
         self.response.write(template.render())
 
 
-class ProposalPage(webapp2.RequestHandler):
-    def get(self):
-        template = jinja_environment.get_template('proposal.html')
-        self.response.write(template.render())
-
-
 class EssayPage(webapp2.RequestHandler):
     def get(self, essay_name):
         with open('essays/' + essay_name + '.essay') as file_handle:
