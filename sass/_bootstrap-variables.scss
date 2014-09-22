@@ -144,9 +144,9 @@ $table-border-color:            #828170;
 
 // $btn-font-weight:                normal
 
-// $btn-default-color:              #333
-// $btn-default-bg:                 #fff
-// $btn-default-border:             #ccc
+$btn-default-color:              $gray-light; //#333
+$btn-default-bg:                 #2f2a39; //#fff
+$btn-default-border:             $gray-light; //#ccc
 
 // $btn-primary-color:              #fff
 // $btn-primary-bg:                 $brand-primary
