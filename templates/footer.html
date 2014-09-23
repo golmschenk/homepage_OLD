@@ -1,6 +1,14 @@
 <footer>
-    <p class="text-right">Copyright &copy; Greg Olmschenk
-        <script>document.write(new Date().getFullYear())</script>
-        . All rights reserved.
-    </p>
+    <div class="row">
+        {% block footerdiv %}<div class="col-md-12">{% endblock footerdiv %}
+
+            <hr>
+
+            <p class="text-right">Copyright &copy; Greg Olmschenk
+                <script>document.write(new Date().getFullYear())</script>
+                . All rights reserved.
+            </p>
+
+        </div>
+    </div>
 </footer>
